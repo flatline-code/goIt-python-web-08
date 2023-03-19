@@ -1,5 +1,5 @@
 from mongoengine import Document, CASCADE
-from mongoengine.fields import ListField, StringField, ReferenceField
+from mongoengine.fields import ListField, StringField, ReferenceField, BooleanField
 
 
 class Author(Document):
@@ -12,3 +12,9 @@ class Quote(Document):
     tags = ListField(StringField())
     author = ReferenceField(Author, reverse_delete_rule=CASCADE)
     quote = StringField()
+
+class Contact(Document):
+    fullname = StringField()
+    email = StringField()
+    recievedMessage = BooleanField(default=False)
+    address = StringField()

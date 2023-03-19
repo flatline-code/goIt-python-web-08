@@ -10,6 +10,7 @@ packages = [{include = "goit_python_web_08"}]
 python = "^3.11"
 pymongo = "^4.3.3"
 mongoengine = "^0.27.0"
+pika = "^1.3.1"
 
 
 [build-system]
